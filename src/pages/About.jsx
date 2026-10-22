@@ -1,12 +1,12 @@
-import { aboutSections } from "../content/about.js";
+import { aboutSections } from "../content/about";
+import Section from "../components/Section";
 
-const About = () => {
+export default function About() {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>This is the about page.</p>
-    </div>
+    <main>
+      {aboutSections.map((s) => (
+        <Section key={s.id} section={s} />
+      ))}
+    </main>
   );
-};
-
-export default About;
+}
