@@ -1,36 +1,64 @@
 export default function Section({ section }) {
+  const { id, number, label, title, description, closing, stages } = section;
+
   return (
     <section
-      id={section.id}
-      className="mx-auto max-w-3xl scroll-mt-24 px-6 py-16"
+      id={id}
+      aria-labelledby={`${id}-title`}
+      className="scroll-mt-28 border-b border-gray-200 py-16 md:py-24"
     >
-      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-600">
-        {section.number}
-      </p>
+      <div className="grid gap-8 md:grid-cols-[1fr_2fr] md:gap-16">
+        {/* Section label */}
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">
+            {number} / {label}
+          </p>
+        </div>
 
-      <h2 className="mb-6 text-3xl font-bold text-gray-900">{section.title}</h2>
+        {/* Main content */}
+        <div className="max-w-2xl">
+          <h2
+            id={`${id}-title`}
+            className="text-3xl font-bold leading-tight tracking-tight text-gray-950 md:text-4xl"
+          >
+            {title}
+          </h2>
 
-      <div className="space-y-4 leading-relaxed text-gray-700">
-        {section.paragraphs?.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+          <p className="mt-5 text-lg leading-relaxed text-gray-600">
+            {description}
+          </p>
 
-        {section.intro && <p>{section.intro}</p>}
+          {/* Program stages */}
+          {stages?.length > 0 && (
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {stages.map((stage, index) => (
+                <article
+                  key={stage.id}
+                  className="rounded-xl border border-gray-200 p-4"
+                >
+                  <span className="text-sm font-semibold text-blue-700">
+                    0{index + 1}
+                  </span>
 
-        {section.list && (
-          <ul className="list-disc space-y-3 pl-6">
-            {section.list.map((item, i) => (
-              <li key={i}>
-                <strong className="text-gray-900">{item.lead}</strong>{" "}
-                {item.text}
-              </li>
-            ))}
-          </ul>
-        )}
+                  <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                    {stage.title}
+                  </h3>
 
-        {section.outro && <p>{section.outro}</p>}
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                    {stage.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          )}
 
-        <p className="font-semibold text-gray-900">{section.closing}</p>
+          {/* Optional closing statement */}
+          {closing && (
+            <p className="mt-8 border-l-2 border-blue-600 pl-4 text-base font-medium leading-relaxed text-gray-900 md:text-lg">
+              {closing}
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );

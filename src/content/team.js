@@ -1,50 +1,49 @@
-// in /public/avatars/ until official portraits are approved.
-
-export const cabinet = [
+// Replace null with an approved member name when available.
+// Until then, the UI can display the role and an illustrated avatar.
+export const cabinetRoles = [
   {
     role: "CEO",
     title: "Chief Executive Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/ceo.svg",
   },
   {
     role: "COO",
     title: "Chief Operations Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/coo.svg",
   },
   {
     role: "CTO",
     title: "Chief Technology Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/cto.svg",
   },
   {
     role: "CMO",
     title: "Chief Marketing Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/cmo.svg",
   },
   {
     role: "CFO",
     title: "Chief Finance Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/cfo.svg",
   },
   {
     role: "ED",
     title: "Executive Director",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/ed.svg",
   },
   {
     role: "YDSPO",
     title: "Youth Development & Safe Policy Officer",
-    name: "TBD",
+    name: null,
     avatar: "/avatars/ydspo.svg",
   },
 ];
 
-// Cabinet Assistants — only rendered if the array is non-empty.
-// Add entries here when applicable.
+// Render the assistants section only when it contains members.
 export const cabinetAssistants = [];
