@@ -1,5 +1,6 @@
 export const aboutContent = {
-  pageTitle: "A new generation of leaders. A real-world purpose.",
+  smallPageTitle: "A new generation of leaders",
+  pageTitle: "A real-world purpose",
 
   sections: [
     {

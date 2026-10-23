@@ -20,41 +20,53 @@ export default function About() {
         Skip to content
       </a>
 
-      <main id="main-content" tabIndex={-1} className="focus:outline-none">
-        {/* Page introduction */}
-        <header className="mx-auto max-w-5xl px-6 pb-10 pt-20 md:pb-14 md:pt-28">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
-            About us
-          </p>
+      {/* Section navigation */}
+      <nav
+        aria-label="About sections"
+        className="sticky top-0 z-20 border-y border-gray-200 bg-white/90 backdrop-blur-md"
+      >
+        <ul className="mx-auto flex max-w-5xl gap-6 overflow-x-auto px-6 py-4">
+          {navLinks.map((link) => (
+            <li key={link.href} className="shrink-0">
+              <a
+                href={link.href}
+                className="rounded-sm text-sm font-medium text-gray-600 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-gray-950 md:text-6xl">
-            {aboutContent.pageTitle}
-          </h1>
+      <main id="main-content" tabIndex={-1} classname="">
+        <header className="relative w-full">
+          <img
+            src="https://media.istockphoto.com/id/2182250916/photo/teamwork-concept-with-diverse-hands-joining-together-symbolizing-unity-cooperation-and.jpg?s=1024x1024&w=is&k=20&c=DkLbZc9f0tsBhLXi2-yBgg-g0jXRECdtYGrEogCvxNg="
+            alt="Young people collaborating at a community event"
+            className="h-[400px] w-full object-cover md:h-[500px]"
+            loading="eager"
+          />
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
-            We bring young people together to learn, lead, and turn ideas into
-            meaningful action.
-          </p>
+          {/* Dark overlay for text legibility */}
+          <div className="absolute inset-0 bg-gray-950/50" aria-hidden="true" />
+
+          {/* Centered content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">
+              {aboutContent.smallPageTitle}
+            </p>
+
+            <h1 className="m-4 text-5xl font-bold leading-tight tracking-tight text-sky-50">
+              {aboutContent.pageTitle}
+            </h1>
+
+            <p className="text-base text-gray-200">
+              We bring young people together to learn, lead, and turn ideas into
+              meaningful action.
+            </p>
+          </div>
         </header>
-
-        {/* Section navigation */}
-        <nav
-          aria-label="About sections"
-          className="sticky top-0 z-20 border-y border-gray-200 bg-white/90 backdrop-blur-md"
-        >
-          <ul className="mx-auto flex max-w-5xl gap-6 overflow-x-auto px-6 py-4">
-            {navLinks.map((link) => (
-              <li key={link.href} className="shrink-0">
-                <a
-                  href={link.href}
-                  className="rounded-sm text-sm font-medium text-gray-600 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
 
         {/* About sections */}
         <div className="mx-auto max-w-5xl px-6">
