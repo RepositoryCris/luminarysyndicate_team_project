@@ -6,7 +6,7 @@ export const aboutContent = {
     {
       id: "mission",
       number: "4.1",
-      label: "OUR MISSION",
+      label: "What we do (Our mission)",
       title: "From ideas to real change.",
       description:
         "We bring young people together to learn diplomacy, solve real-world problems, and turn ideas into practical projects.",
@@ -16,7 +16,7 @@ export const aboutContent = {
     {
       id: "vision",
       number: "4.2",
-      label: "OUR VISION",
+      label: "Why we do (Our vision)",
       title: "Young voices deserve a seat at the table.",
       description:
         "We are building a space where young people can develop solutions, practice leadership, and contribute to a better future.",
@@ -39,7 +39,7 @@ export const aboutContent = {
       id: "how",
       number: "4.4",
       label: "OUR METHOD",
-      title: "Learn. Debate. Act.",
+      title: "Solve real-world problems",
       description:
         "In 12 weeks, participants learn from experts, debate real challenges, and develop projects designed to turn their strongest ideas into action.",
 

@@ -1,5 +1,5 @@
 import { aboutContent } from "../content/about";
-import Section from "../components/Section";
+
 import Team from "../components/Team";
 
 const navLinks = [
@@ -39,12 +39,12 @@ export default function About() {
         </ul>
       </nav>
 
-      <main id="main-content" tabIndex={-1} classname="">
+      <main id="main-content" tabIndex={-1}>
         <header className="relative w-full">
           <img
             src="https://media.istockphoto.com/id/2182250916/photo/teamwork-concept-with-diverse-hands-joining-together-symbolizing-unity-cooperation-and.jpg?s=1024x1024&w=is&k=20&c=DkLbZc9f0tsBhLXi2-yBgg-g0jXRECdtYGrEogCvxNg="
             alt="Young people collaborating at a community event"
-            className="h-[400px] w-full object-cover md:h-[500px]"
+            className="h-100 w-full object-cover md:h-125"
             loading="eager"
           />
 
@@ -68,12 +68,161 @@ export default function About() {
           </div>
         </header>
 
-        {/* About sections */}
-        <div className="mx-auto max-w-5xl px-6">
-          {aboutContent.sections.map((section) => (
-            <Section key={section.id} section={section} />
-          ))}
-        </div>
+        <section className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center">
+          <div className="w-full md:w-1/2">
+            <header>
+              <div class="flex items-center gap-3">
+                <span class="h-px w-8 bg-indigo-950"></span>
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-950">
+                  {aboutContent.sections[0].label}
+                </p>
+              </div>
+            </header>
+
+            <h2 className="my-4 lg:my-6 text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
+              {aboutContent.sections[0].title}
+            </h2>
+
+            <p
+              className="mt-4
+             text-lg text-gray-600"
+            >
+              {aboutContent.sections[0].description}
+            </p>
+            <p className="my-4 border-l-2 border-blue-950 pl-4 text-base font-medium leading-relaxed text-gray-900 md:text-lg">
+              {aboutContent.sections[0].closing}
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 aspect-4/3 overflow-hidden rounded-xl bg-gray-100">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+              alt="two people stood over a pavement with a message passion led us here"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <section className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center">
+          <div className="w-full md:w-1/2">
+            <header>
+              <div class="flex items-center gap-3">
+                <span class="h-px w-8 bg-indigo-950"></span>
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-950">
+                  {aboutContent.sections[1].label}
+                </p>
+              </div>
+            </header>
+
+            <h2 className="my-4 lg:my-6 text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
+              {aboutContent.sections[1].title}
+            </h2>
+
+            <p className="mt-4 text-lg  text-gray-600">
+              {aboutContent.sections[1].description}
+            </p>
+            <p className="my-4 border-l-2 border-blue-800 pl-4 text-base font-medium leading-relaxed text-gray-900 md:text-lg">
+              {aboutContent.sections[1].closing}
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 aspect-4/3 overflow-hidden rounded-xl bg-gray-100">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1758272133803-1cbb513689ca?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+              alt="two people stood over a pavement with a message passion led us here"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <section className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center">
+          <div className="w-full md:w-1/2">
+            <header>
+              <div class="flex items-center gap-3">
+                <span class="h-px w-8 bg-indigo-950"></span>
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-950">
+                  {aboutContent.sections[2].label}
+                </p>
+              </div>
+            </header>
+
+            <h2 className="my-4 lg:my-6 text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
+              {aboutContent.sections[2].title}
+            </h2>
+
+            <p className="mt-4 text-lg  text-gray-600">
+              {aboutContent.sections[2].description}
+            </p>
+            <p className="my-4 border-l-2 border-blue-800 pl-4 text-base font-medium leading-relaxed text-gray-900 md:text-lg">
+              {aboutContent.sections[2].closing}
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 aspect-4/3 overflow-hidden rounded-xl bg-gray-100">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?q=80&w=385&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+              alt="two people stood over a pavement with a message passion led us here"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <section className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center">
+          <div className="w-full md:w-1/2">
+            <header>
+              <div class="flex items-center gap-3">
+                <span class="h-px w-8 bg-indigo-950"></span>
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-950">
+                  {aboutContent.sections[3].label}
+                </p>
+              </div>
+            </header>
+
+            <h2 className="my-4 lg:my-6 text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
+              {aboutContent.sections[3].title}
+            </h2>
+
+            <p className="mt-4 text-lg  text-gray-600">
+              {aboutContent.sections[3].description}
+            </p>
+            <p className="my-4 border-l-2 border-blue-800 pl-4 text-base font-medium leading-relaxed text-gray-900 md:text-lg">
+              {aboutContent.sections[3].closing}
+            </p>
+
+            {/* Program stages */}
+            {aboutContent.sections[3].stages?.length > 0 && (
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                {aboutContent.sections[3].stages.map((stage, index) => (
+                  <article
+                    key={stage.id}
+                    className="rounded-xl border border-gray-200 p-4"
+                  >
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-lg font-semibold text-blue-950">
+                        {index + 1}
+                      </span>
+                      <h3 className="text-lg font-semibold text-blue-950">
+                        {stage.title}
+                      </h3>
+                    </div>
+
+                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                      {stage.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="w-full md:w-1/2 aspect-3/4 overflow-hidden rounded-xl bg-gray-100">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1773530057098-6db992c0f90b?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+              alt="two people stood over a pavement with a message passion led us here"
+              loading="lazy"
+            />
+          </div>
+        </section>
 
         {/* Team */}
         <div id="team" className="scroll-mt-24">
