@@ -15,22 +15,21 @@ export default function About() {
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-blue-700 focus:px-4 focus:py-3 focus:text-white focus:outline-none focus:ring-2 focus:ring-blue-300"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-blue-800 focus:px-4 focus:py-3 focus:text-white"
       >
         Skip to content
       </a>
 
-      {/* Section navigation */}
       <nav
         aria-label="About sections"
         className="sticky top-0 z-20 border-y border-gray-200 bg-white/90 backdrop-blur-md"
       >
-        <ul className="mx-auto flex max-w-5xl gap-6 overflow-x-auto px-6 py-4">
+        <ul className="flex gap-6 overflow-x-auto px-6 py-4">
           {navLinks.map((link) => (
             <li key={link.href} className="shrink-0">
               <a
                 href={link.href}
-                className="rounded-sm text-sm font-medium text-gray-600 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700"
+                className="text-sm font-medium text-gray-600 transition-colors hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-800"
               >
                 {link.label}
               </a>
