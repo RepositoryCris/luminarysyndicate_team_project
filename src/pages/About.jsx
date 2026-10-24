@@ -225,6 +225,11 @@ export default function About() {
                 ))}
               </div>
             )}
+            <div className="flex w-full justify-center">
+              <button className="p-2.5 rounded-2xl bg-blue-950 text-amber-50 hover:bg-blue-900">
+                Become a member
+              </button>
+            </div>
           </div>
           <div className="w-full md:w-1/2 aspect-3/4 overflow-hidden rounded-xl bg-gray-100">
             <img
