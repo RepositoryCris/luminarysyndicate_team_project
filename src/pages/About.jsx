@@ -68,7 +68,10 @@ export default function About() {
           </div>
         </header>
 
-        <section className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center">
+        <section
+          id={aboutContent.sections[0].id}
+          className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center"
+        >
           <div className="w-full md:w-1/2">
             <header>
               <div class="flex items-center gap-3">
@@ -103,7 +106,10 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center">
+        <section
+          id={aboutContent.sections[1].id}
+          className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center"
+        >
           <div className="w-full md:w-1/2">
             <header>
               <div class="flex items-center gap-3">
@@ -135,7 +141,10 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center">
+        <section
+          id={aboutContent.sections[2].id}
+          className="flex flex-col lg:gap-16 md:flex-row py-8 px-4 md:px-24 items-center"
+        >
           <div className="w-full md:w-1/2">
             <header>
               <div class="flex items-center gap-3">
@@ -167,7 +176,10 @@ export default function About() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center">
+        <section
+          id={aboutContent.sections[3].id}
+          className="flex flex-col lg:gap-16 md:flex-row-reverse py-8 px-4 md:px-24 items-center"
+        >
           <div className="w-full md:w-1/2">
             <header>
               <div class="flex items-center gap-3">
