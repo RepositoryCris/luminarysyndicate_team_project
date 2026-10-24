@@ -191,7 +191,7 @@ export default function About() {
 
             {/* Program stages */}
             {aboutContent.sections[3].stages?.length > 0 && (
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="my-8 grid gap-4 sm:grid-cols-3">
                 {aboutContent.sections[3].stages.map((stage, index) => (
                   <article
                     key={stage.id}
