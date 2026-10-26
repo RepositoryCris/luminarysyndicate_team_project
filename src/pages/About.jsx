@@ -41,7 +41,7 @@ export default function About() {
       <main id="main-content" tabIndex={-1}>
         <header className="relative w-full">
           <img
-            src="https://media.istockphoto.com/id/2182250916/photo/teamwork-concept-with-diverse-hands-joining-together-symbolizing-unity-cooperation-and.jpg?s=1024x1024&w=is&k=20&c=DkLbZc9f0tsBhLXi2-yBgg-g0jXRECdtYGrEogCvxNg="
+            src="../banners/hero-about.jfif"
             alt="Young people collaborating at a community event"
             className="h-100 w-full object-cover md:h-125"
             loading="eager"
